@@ -16,23 +16,17 @@ public class AireAcondicionado{
     
     public void subirTemperatura(){
         
-        if(temperatura + incremento > max){
-            temperatura = temperatura;
+        if(temperatura + incremento < max){
+            temperatura = temperatura + incremento;
                       
         }
-        else{
-          
-            temperatura = temperatura + incremento;
-        }
+        
     }
     
     public void bajarTemperatura(){
-        if(temperatura - incremento < min){
-            temperatura = temperatura;
-            
-        }
-        else{
+        if(temperatura - incremento > min){
             temperatura = temperatura - incremento;
+            
         }
     }
 
