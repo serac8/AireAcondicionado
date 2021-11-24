@@ -15,26 +15,24 @@ public class AireAcondicionado{
     }
     
     public void subirTemperatura(){
-        if(temperatura < max){
-            temperatura = temperatura + incremento;
-            if(temperatura > max){
-                temperatura = max;
-            }
+        
+        if(temperatura + incremento > max){
+            temperatura = temperatura;
+                      
         }
         else{
-            System.out.println("Introducir un valor válido");
+          
+            temperatura = temperatura + incremento;
         }
     }
     
     public void bajarTemperatura(){
-        if(temperatura > min){
-            temperatura = temperatura - incremento;
-            if(temperatura < min){
-                temperatura = min;
-            }
+        if(temperatura - incremento < min){
+            temperatura = temperatura;
+            
         }
         else{
-            System.out.println("Introducir un valor válido");
+            temperatura = temperatura - incremento;
         }
     }
 
@@ -43,10 +41,13 @@ public class AireAcondicionado{
     }
 
     public void setIncremento(double incrementoDeTemperatura){
-        incremento = incrementoDeTemperatura;
-        if(incrementoDeTemperatura < 0){
-           incrementoDeTemperatura = incremento;
-           System.out.println("Introducir un valor válido");
+        if(incrementoDeTemperatura > 0){
+            incremento = incrementoDeTemperatura;
+
+        }
+        else {
+            incrementoDeTemperatura = incremento;
+            
         }
         
         
