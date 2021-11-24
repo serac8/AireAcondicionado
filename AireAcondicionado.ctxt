@@ -8,6 +8,6 @@ comment3.params=
 comment3.target=void\ bajarTemperatura()
 comment4.params=
 comment4.target=double\ getTemperatura()
-comment5.params=incremento
+comment5.params=incrementoDeTemperatura
 comment5.target=void\ setIncremento(double)
 numComments=6
