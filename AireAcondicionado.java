@@ -24,7 +24,7 @@ public class AireAcondicionado{
         if(temperatura + incremento <= max){
             temperatura = temperatura + incremento;
             vecesCambioTemperatura = vecesCambioTemperatura + 1;
-            if(temperatura + incremento > tempMaxSelec){
+            if(temperatura > tempMaxSelec){
                 tempMaxSelec = temperatura;
             }
         }
@@ -36,7 +36,7 @@ public class AireAcondicionado{
         if(temperatura - incremento >= min){
             temperatura = temperatura - incremento;
             vecesCambioTemperatura = vecesCambioTemperatura + 1;
-            if(temperatura - incremento < tempMinSelec){
+            if(temperatura < tempMinSelec){
                 tempMinSelec = temperatura;
             }
         }
